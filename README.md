@@ -2,7 +2,7 @@
 
 This is my professional portfolio website, designed to showcase my experience, technical skills, and projects as a Systems Analyst transitioning into Cloud Computing. Built with HTML5, CSS3, JavaScript, and enhanced with responsive design, dark mode support, and subtle UI animations.
 
-## 🌟 Features
+## Features
 
 - Clean, responsive layout
 - Dark mode toggle
@@ -11,7 +11,7 @@ This is my professional portfolio website, designed to showcase my experience, t
 - Contact section with email and social links
 - About and Elevator Pitch highlighting my background and career path
 
-## 🧠 Skills Highlighted
+## Skills Highlighted
 
 - Systems Analysis & Design  
 - Scripting & Automation  
@@ -20,7 +20,7 @@ This is my professional portfolio website, designed to showcase my experience, t
 - Networking & Security  
 - BPMN Modeling
 
-## 📌 Purpose
+## Purpose
 
 This site is part of my journey into Cloud Computing, as I pursue AWS Cloud Practitioner and Solutions Architect certifications. It's designed to be easily shareable, visually appealing, and aligned with best practices in modern web development.
 
