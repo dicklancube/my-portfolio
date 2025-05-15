@@ -5,34 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dickla Ncube | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 <body>
     <!-- Sticky Navigation -->
-  <nav id="navbar">
-    <div class="nav-container container">
-      <button class="mobile-menu-toggle" aria-label="Toggle menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <a href="#home" class="logo">Dickla</a>
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <button id="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-moon"></i>
-      </button>
-    </div>
-  </nav>
+    <nav id="navbar">
+        <div class="nav-container container">
+          <button class="mobile-menu-toggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          
+          <a href="#home" class="logo">DICKLA</a>
+          
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+          
+          <div class="nav-actions">
+            <a href="/images/2025_Resume.pdf" class="download-cv" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+            <button id="theme-toggle" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
 
   <!-- Hero Section -->
   <section id="home" class="fade-in">
     <div class="container">
       <div class="hero-content">
         <div class="profile-image-container">
-          <img src="/images/profile.JPG" alt="Dickla Ncube" class="profile-image">
+          <img src="images/profile.JPG" alt="Dickla Ncube" class="profile-image">
         </div>
         <h1>Hi, I'm <span class="highlight">Dickla Ncube</span></h1>
         <p>Systems Analyst | UI Designer | Creative Problem Solver</p>
@@ -48,71 +58,86 @@
   <section id="about" class="animate-on-scroll">
     <div class="container">
       <h2>About Me</h2>
-      <p>Hi, I’m a Systems Analyst with 3 years of experience in streamlining IT processes and delivering efficient, user-focused solutions. I’m currently expanding into Cloud Computing, with a strong focus on AWS. I'm actively pursuing certifications as an AWS Cloud Practitioner and Solutions Architect to deepen my cloud expertise and transition into cloud-focused roles.
-         I’m passionate about using technology to solve real-world problems and continuously growing in this ever-evolving field.</p>
-      <p>When I'm not coding, you can find me hiking in the mountains or experimenting with new recipes in the kitchen.</p>
+      <div class="about-me">
+        <p>
+          Hi, I’m a Systems Analyst with 3 years of experience designing and optimizing IT systems that align with business needs. I specialize in systems analysis, scripting, and automation, and have built a strong foundation in web technologies including HTML5, CSS3, JavaScript, and Git.
+        </p>
+      
+        <p>
+          Currently, I’m transitioning into Cloud Computing with a focus on AWS, pursuing certifications as a Cloud Practitioner and Solutions Architect. I have also expanded my expertise in networking and security. I thrive in collaborative environments and enjoy working closely with cross-functional teams to deliver innovative, scalable solutions.
+        </p>
+      
+        <p>
+          I’m passionate about bridging the gap between systems and users—delivering cloud-ready solutions that are both technically sound and user-friendly.
+        </p>
+      
+        <p>
+          When I’m not busy at my computer, you’ll find me hiking in the mountains or experimenting with new recipes in the kitchen.
+        </p>
+      </div>
+      
       
       <h3 style="margin-top: 2rem;">My Skills</h3>
       <div class="skills">
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>JavaScript</span>
-        <span>Linux</span>
-        <span>TypeScript</span>
-        <span>Node.js</span>
-        <span>Git</span>
-        <span>Figma</span>
-        <span>UI/UX Design</span>
+        <div class="skill"><i class="devicon-html5-plain colored"></i> HTML5</div>
+        <div class="skill"><i class="devicon-css3-plain colored"></i> CSS3</div>
+        <div class="skill"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+        <div class="skill"><i class="fas fa-project-diagram"></i> Systems Analysis & Design</div>
+        <div class="skill"><i class="fas fa-terminal"></i> Scripting & Automation</div>
+        <div class="skill"><i class="devicon-amazonwebservices-original colored"></i> Cloud Fundamentals (AWS)</div>
+        <div class="skill"><i class="devicon-git-plain colored"></i> Git</div>
+        <div class="skill"><i class="fas fa-network-wired"></i> Networking & Security</div>
+        <div class="skill"><i class="fas fa-file-alt"></i> Technical Documentation</div>
+        <div class="skill"><i class="devicon-figma-plain colored"></i> Figma</div>
+        <div class="skill"><i class="fas fa-project-diagram"></i> BPMN Modeling</div>
+        
       </div>
-    </div>
   </section>
 
   <!-- Projects Section -->
   <section id="projects" class="animate-on-scroll">
     <div class="container">
       <h2>Featured Projects</h2>
-      <p>Here are some of my recent projects. Each one was carefully crafted to solve specific problems.</p>
-      
       <div class="projects-grid">
+        <!-- Project Card 1 -->
         <div class="project-card">
-          <img src="https://via.placeholder.com/600x400?text=E-Commerce+Dashboard" alt="E-Commerce Dashboard" class="project-image">
+          <img src="https://via.placeholder.com/600x400?text=E-Commerce+Dashboard" alt="Project 1" class="project-image">
           <div class="project-info">
             <h3>E-Commerce Dashboard</h3>
-            <p>A comprehensive analytics dashboard for e-commerce businesses with real-time data visualization.</p>
+            <p>Advanced analytics platform for online stores with real-time data visualization.</p>
             <div class="project-tags">
               <span class="project-tag">React</span>
               <span class="project-tag">Node.js</span>
               <span class="project-tag">Chart.js</span>
             </div>
-            <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
           </div>
         </div>
         
+        <!-- Project Card 2 -->
         <div class="project-card">
-          <img src="https://via.placeholder.com/600x400?text=Portfolio+Template" alt="Portfolio Template" class="project-image">
+          <img src="https://via.placeholder.com/600x400?text=Portfolio+Template" alt="Project 2" class="project-image">
           <div class="project-info">
             <h3>Portfolio Template</h3>
-            <p>A responsive portfolio template with dark/light mode and smooth animations.</p>
+            <p>Modern responsive portfolio with dark/light mode and smooth animations.</p>
             <div class="project-tags">
               <span class="project-tag">HTML5</span>
               <span class="project-tag">CSS3</span>
               <span class="project-tag">JavaScript</span>
             </div>
-            <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
           </div>
         </div>
         
+        <!-- Project Card 3 -->
         <div class="project-card">
-          <img src="https://via.placeholder.com/600x400?text=Task+Management+App" alt="Task Management App" class="project-image">
+          <img src="https://via.placeholder.com/600x400?text=Task+Management+App" alt="Project 3" class="project-image">
           <div class="project-info">
             <h3>Task Management App</h3>
-            <p>A productivity app for organizing tasks with drag-and-drop functionality.</p>
+            <p>Productivity application with drag-and-drop functionality and team collaboration.</p>
             <div class="project-tags">
               <span class="project-tag">React</span>
               <span class="project-tag">Firebase</span>
               <span class="project-tag">Material UI</span>
             </div>
-            <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
           </div>
         </div>
       </div>
