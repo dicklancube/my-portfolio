@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dickla Ncube | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+  <nav id="navbar">
+    <div class="nav-container container">
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="#home" class="logo">Dickla</a>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="fade-in">
+    <div class="container">
+      <div class="hero-content">
+        <div class="profile-image-container">
+          <img src="/images/profile.JPG" alt="Dickla Ncube" class="profile-image">
+        </div>
+        <h1>Hi, I'm <span class="highlight">Dickla Ncube</span></h1>
+        <p>Systems Analyst | UI Designer | Creative Problem Solver</p>
+        <div class="btn-container">
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="#contact" class="btn" style="background: transparent; border: 2px solid var(--accent); color: var(--accent); margin-left: 1rem;">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="animate-on-scroll">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hi, I’m a Systems Analyst with 3 years of experience in streamlining IT processes and delivering efficient, user-focused solutions. I’m currently expanding into Cloud Computing, with a strong focus on AWS. I'm actively pursuing certifications as an AWS Cloud Practitioner and Solutions Architect to deepen my cloud expertise and transition into cloud-focused roles.
+         I’m passionate about using technology to solve real-world problems and continuously growing in this ever-evolving field.</p>
+      <p>When I'm not coding, you can find me hiking in the mountains or experimenting with new recipes in the kitchen.</p>
+      
+      <h3 style="margin-top: 2rem;">My Skills</h3>
+      <div class="skills">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>Linux</span>
+        <span>TypeScript</span>
+        <span>Node.js</span>
+        <span>Git</span>
+        <span>Figma</span>
+        <span>UI/UX Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="animate-on-scroll">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <p>Here are some of my recent projects. Each one was carefully crafted to solve specific problems.</p>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400?text=E-Commerce+Dashboard" alt="E-Commerce Dashboard" class="project-image">
+          <div class="project-info">
+            <h3>E-Commerce Dashboard</h3>
+            <p>A comprehensive analytics dashboard for e-commerce businesses with real-time data visualization.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Chart.js</span>
+            </div>
+            <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400?text=Portfolio+Template" alt="Portfolio Template" class="project-image">
+          <div class="project-info">
+            <h3>Portfolio Template</h3>
+            <p>A responsive portfolio template with dark/light mode and smooth animations.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
+          </div>
+        </div>
+        
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400?text=Task+Management+App" alt="Task Management App" class="project-image">
+          <div class="project-info">
+            <h3>Task Management App</h3>
+            <p>A productivity app for organizing tasks with drag-and-drop functionality.</p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Firebase</span>
+              <span class="project-tag">Material UI</span>
+            </div>
+            <a href="#" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="animate-on-scroll">
+    <div class="container">
+      <h2>Get In Touch</h2>
+      <p>Have a project in mind or want to collaborate? Feel free to reach out!</p>
+      
+      <div class="contact-content">
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email Address</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+        
+        <div class="contact-info">
+          <h3>Other Ways to Reach Me</h3>
+          <p>Prefer a more direct approach? Here are my contact details:</p>
+          
+          <div class="social-links">
+            <a href="mailto:dicklancube@hotmail.com?subject=Website%20Contact&body=Hi%20Dickla,%0D%0A%0D%0AI%20found%20your%20portfolio%20website%20and%20would%20like%20to%20connect%20with%20you." class="social-link">
+                <i class="fas fa-envelope"></i> dicklancube@hotmail.com
+              </a>
+            <a href="tel:+1234567890" class="social-link">
+              <i class="fas fa-phone"></i> +27 7804 39999
+            </a>
+            <a href="https://www.linkedin.com/in/dickla-ncube-43368599" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/alex" target="_blank" class="social-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Dickla. All rights reserved.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem;">Built with <i class="fas fa-heart" style="color: #e74c3c;"></i> and lots of coffee</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
