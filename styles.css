@@ -13,6 +13,13 @@
     html {
       transition: background-color 0.3s ease, color 0.3s ease;
     }
+    .tagline {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: #333;
+    }
+    
 
     [data-theme="dark"] {
       /* Dark Theme */
