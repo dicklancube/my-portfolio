@@ -42,9 +42,11 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+      html {
+        scroll-behavior: smooth;
+        transition: background-color var(--transition-normal), color var(--transition-normal);
+      }
+    
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -148,16 +150,53 @@
       align-items: center;
       padding: 1.5rem 2rem;
     }
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      margin-right: 1rem;
+    }
+    
+    .logo-primary {
+      font-size: 1.8rem;
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+    }
+    
+    .logo-secondary {
+      font-size: 1.2rem;
+  margin-top: -0.3rem;
+  background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+    }
 
     .logo {
       font-family: 'Poppins', sans-serif;
       letter-spacing: 1px;
       font-weight: 700;
       font-size: 1.5rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
       color: transparent;
+      transition: all 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      .logo-container {
+        order: -1;
+        margin-right: auto;
+      }
+      
+      .logo {
+        font-size: 1.2rem;
+      }
+      
+      .logo-primary {
+        transform: translateY(50%);
+      }
+      
+      .logo-secondary {
+        transform: translateY(-50%);
+      }
     }
 
     .nav-links {
@@ -434,6 +473,11 @@
       box-shadow: 0 5px 15px var(--shadow);
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       border: 2px solid transparent;
+    
+      display: flex;
+      flex-direction: column;
+      height: 400px; /* fixed height for uniform cards, adjust as needed */ 
+     
     }
     .project-card::before {
       content: '';
@@ -486,6 +530,10 @@
 
     .project-info {
       padding: 1.5rem;
+  flex-grow: 1; /* fills vertical space remaining */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* to keep spacing balanced */
     }
 
     .project-info h3 {
