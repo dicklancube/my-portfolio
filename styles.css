@@ -515,7 +515,7 @@
     }
     
     .project-card:nth-child(2)::before {
-      background: linear-gradient(135deg, #00b894 0%, #55efc4 100%);
+      background: linear-gradient(135deg, #07dfb4 0%, #55efc4 100%);
     }
     
     .project-card:nth-child(3)::before {
