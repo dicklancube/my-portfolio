@@ -1,4 +1,4 @@
-# 💼 Personal Portfolio Website
+#Personal Portfolio Website
 
 This is my professional portfolio website, designed to showcase my experience, technical skills, and projects as a Systems Analyst transitioning into Cloud Computing. Built with HTML5, CSS3, JavaScript, and enhanced with responsive design, dark mode support, and subtle UI animations.
 
