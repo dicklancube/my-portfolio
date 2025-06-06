@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Set current year in footer
   document.getElementById('current-year').textContent = new Date().getFullYear();
+  document.body.classList.add('page-loaded');
 
   // Theme functionality
   const themeToggle = document.getElementById('theme-toggle');
