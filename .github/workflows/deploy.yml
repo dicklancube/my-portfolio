@@ -1,26 +1,17 @@
-<<<<<<< HEAD
 name: Deploy Static Website to S3
-=======
-name: Deploy to S3
->>>>>>> fixing-mobile-humburger-functionality
 
 on:
   push:
     branches:
-<<<<<<< HEAD
-      - main
-=======
       - main  # Or the branch you want to trigger from
->>>>>>> fixing-mobile-humburger-functionality
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
       - name: Checkout source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -32,17 +23,9 @@ jobs:
       - name: Sync files to S3
         run: |
           aws s3 sync ./ s3://${{ secrets.S3_BUCKET_NAME }} --delete --exclude ".git/*" --exclude ".github/*"
-=======
-    - name: Checkout code
-      uses: actions/checkout@v4
 
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v4
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ secrets.AWS_REGION }}
-
-    - name: Sync to S3
-      run: aws s3 sync ./ s3://${{ secrets.S3_BUCKET_NAME }} --delete --exclude ".git/*" --exclude ".github/*"
->>>>>>> fixing-mobile-humburger-functionality
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
