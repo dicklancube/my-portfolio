@@ -10,27 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # Optional: If your site needs to be built (e.g., with npm, Hugo, etc.)
-    # - name: Build site
-    #   run: |
-    #     npm install
-    #     npm run build
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1
+      - name:  Sync website to S3
+        run: |
+          aws s3 sync . s3://my-ci-cd-deployment --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "README.md" \
+            --exclude "node_modules/*"
 
-    - name: Sync files to S3
-      run: |
-        aws s3 sync ./public s3://my-ci-cd-deployment --delete
-      # Replace ./public if your site output is in a different folder
-
-    - name: Create CloudFront Invalidation
-      run: |
-        aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
