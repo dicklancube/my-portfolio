@@ -3,7 +3,7 @@ name: Deploy to S3 and Invalidate CloudFront
 on:
   push:
     branches:
-      - main   # or your deployment branch
+      - main
 
 jobs:
   deploy:
@@ -13,7 +13,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Optional: Build step if you use a static site generator or bundler
+    # Optional: If your site needs to be built (e.g., with npm, Hugo, etc.)
     # - name: Build site
     #   run: |
     #     npm install
@@ -24,12 +24,12 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: YOUR_AWS_REGION  # e.g. us-east-1
+        aws-region: us-east-1
 
     - name: Sync files to S3
       run: |
-        aws s3 sync ./public s3://YOUR_S3_BUCKET_NAME --delete
-      # Replace ./public with your build output folder if applicable
+        aws s3 sync ./public s3://my-ci-cd-deployment --delete
+      # Replace ./public if your site output is in a different folder
 
     - name: Create CloudFront Invalidation
       run: |
