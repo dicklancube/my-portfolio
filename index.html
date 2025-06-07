@@ -18,7 +18,11 @@
                 <i class="fas fa-bars"></i>
             </button>
             
-            <a href="#home" class="logo">DICKLA | NCUBE</a>
+            <a href="#home" class="logo">
+ 		  <span class="logo-top">DICKLA</span>
+		  <span class="logo-bottom">NCUBE</span>
+	    </a>
+
             
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
@@ -39,23 +43,62 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="fade-in">
+    <section id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="profile-image-container">
-                    <img src="resources/dickla.jpg" alt="Dickla Ncube" class="profile-image" width="180" height="180">
+                <!-- Animated Profile Image Container -->
+                <div class="profile-image-container" aria-hidden="true">
+                    <img src="resources/dickla.jpg" alt="Dickla Ncube" class="profile-image" width="180" height="180" loading="eager">
+                    <div class="profile-image-border"></div>
+                    <div class="profile-image-glow"></div>
                 </div>
-                <h1>Hi, I'm <span class="highlight">Dickla Ncube</span></h1>
-                <p class="tagline">Systems Analyst | Cloud Technology Enthusiast | Creative Problem Solver</p>
-
+    
+                <!-- Staggered Text Animation -->
+                <h1 class="hero-title">
+                    <span class="line">Hi, I'm</span>
+                    <span class="line highlight-container">
+                        <span class="highlight">Dickla Ncube</span>
+                        <span class="highlight-underline" aria-hidden="true"></span>
+                    </span>
+                </h1>
+    
+                <!-- Animated Tagline -->
+                <p class="tagline">
+                    <span class="word">Systems</span>
+                    <span class="word">Analyst</span>
+                    <span class="word">|</span>
+                    <span class="word">Cloud</span>
+                    <span class="word">Technology</span>
+                    <span class="word">Enthusiast</span>
+                    <span class="word">|</span>
+                    <span class="word">Creative</span>
+                    <span class="word">Problem</span>
+                    <span class="word">Solver</span>
+                </p>
+    
+                <!-- Interactive Buttons -->
                 <div class="btn-container">
-                    <a href="#projects" class="btn" aria-label="View my work">View My Work</a>
-                    <a href="#contact" class="btn btn-outline" aria-label="Contact me">Contact Me</a>
+                    <a href="#projects" class="btn magnetic-btn" aria-label="View my work" data-cursor-interact>
+                        <span class="btn-text">View My Work</span>
+                        <span class="btn-icon" aria-hidden="true">→</span>
+                        <span class="btn-hover-effect" aria-hidden="true"></span>
+                    </a>
+                    <a href="#contact" class="btn btn-outline magnetic-btn" aria-label="Contact me" data-cursor-interact>
+                        <span class="btn-text">Contact Me</span>
+                        <span class="btn-icon" aria-hidden="true">↓</span>
+                        <span class="btn-hover-effect" aria-hidden="true"></span>
+                    </a>
                 </div>
             </div>
         </div>
+    
+        <!-- Animated Background Elements -->
+        <div class="hero-bg-shapes" aria-hidden="true">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="animate-on-scroll">
         <div class="container">
@@ -89,23 +132,27 @@
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
-                <!-- Project Card 1 -->
-                <article class="project-card">
-                    <div class="project-info">
-                        <h3>Cloud-Based Web Application Deployment on AWS</h3>
-                        <p>Developed and deployed a responsive web application using AWS services to ensure scalability, high availability, and cost-efficiency.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">EC2</span>
-                            <span class="project-tag">S3</span>
-                            <span class="project-tag">Route 53</span>
-                            <span class="project-tag">Elastic Beanstalk / ECS</span>
-                        </div>
-                    </div>
-                </article>
                 
+                <!-- Project Card 1 -->
+                <a href="https://docs.google.com/document/d/GOOGLE_DOC_ID_1" target="_blank" class="project-card">
+                    <article class="project-info">
+                        <h3>Automated CI/CD Deployment of Static Web Applications on AWS</h3>
+                        <p>Designed and implemented a fully automated deployment pipeline for static websites using AWS S3, CloudFront, and Terraform. Integrated GitHub Actions to streamline infrastructure provisioning, version control, and zero-downtime deployment workflows. 
+                        This project demonstrates best practices aligned with modern cloud-native architecture.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">CloudFront</span>
+                            <span class="project-tag">AWS S3</span>
+                            <span class="project-tag">Terraform</span>
+                            <span class="project-tag">GitHub Actions</span>
+                            <span class="project-tag">Static Hosting</span>
+                            <span class="project-tag">CI/CD</span>
+                        </div>
+                    </article>
+                </a>
+    
                 <!-- Project Card 2 -->
-                <article class="project-card">
-                    <div class="project-info">
+                <a href="https://docs.google.com/document/d/GOOGLE_DOC_ID_2" target="_blank" class="project-card">
+                    <article class="project-info">
                         <h3>Personal Portfolio Website</h3>
                         <p>A responsive, dark-mode-ready portfolio built with HTML, CSS, and JavaScript. Showcases my skills in systems analysis, automation, web development, and my transition into cloud computing (AWS).</p>
                         <div class="project-tags">
@@ -113,12 +160,12 @@
                             <span class="project-tag">CSS3</span>
                             <span class="project-tag">JavaScript</span>
                         </div>
-                    </div>
-                </article>
-                
+                    </article>
+                </a>
+    
                 <!-- Project Card 3 -->
-                <article class="project-card">
-                    <div class="project-info">
+                <a href="https://docs.google.com/document/d/GOOGLE_DOC_ID_3" target="_blank" class="project-card">
+                    <article class="project-info">
                         <h3>Project Management</h3>
                         <p>Led a project integrating an instrument with the LIS system to automate bidirectional data exchange, reducing manual entry and streamlining workflows. Deployed the solution on AWS using EC2 for hosting, S3 for secure data storage, and CloudWatch for monitoring system health and performance.</p>
                         <div class="project-tags">
@@ -128,11 +175,13 @@
                             <span class="project-tag">Data Automation</span>
                             <span class="project-tag">System Integration</span>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </a>
+    
             </div>
         </div>
     </section>
+    
 
     <!-- Contact Section -->
     <section id="contact" class="animate-on-scroll">
@@ -197,3 +246,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

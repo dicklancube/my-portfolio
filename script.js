@@ -225,3 +225,40 @@ function showAlert(message, type) {
     setTimeout(() => alert.remove(), 500);
   }, 3000);
 }
+// Button hover effect
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    btn.style.setProperty('--x', `${x}px`);
+    btn.style.setProperty('--y', `${y}px`);
+  });
+});
+// Magnetic button effect
+document.querySelectorAll('.magnetic-btn').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const distanceX = x - centerX;
+      const distanceY = y - centerY;
+      
+      btn.style.transform = `translate(${distanceX * 0.1}px, ${distanceY * 0.1}px)`;
+  });
+
+  btn.addEventListener('mouseleave', () => {
+      btn.style.transform = '';
+  });
+});
+
+// Stagger word animations in tagline
+const tagline = document.querySelector('.tagline');
+if (tagline) {
+  const words = tagline.querySelectorAll('.word');
+  words.forEach((word, index) => {
+      word.style.animationDelay = `${1.2 + (index * 0.1)}s`;
+  });
+}
