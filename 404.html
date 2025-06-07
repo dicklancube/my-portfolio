@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Dickla Ncube</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 404-specific styles */
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .error-code {
+            font-size: clamp(5rem, 20vw, 10rem);
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .error-code::after {
+            content: '404';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(108, 92, 231, 0.3);
+            z-index: -1;
+        }
+
+        .error-title {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .error-message {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: var(--text-secondary);
+        }
+
+        .astronaut {
+            width: 150px;
+            height: 150px;
+            margin: 2rem auto;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .home-btn {
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%, -50%);
+            transform-origin: 50% 50%;
+        }
+
+        .home-btn:focus::after {
+            animation: ripple 1s ease-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes ripple {
+            0% { transform: scale(0, 0); opacity: 0.5; }
+            100% { transform: scale(20, 20); opacity: 0; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Lost in Space</h1>
+        <p class="error-message">The page you're looking for doesn't exist or has been moved. Meanwhile, here's an astronaut floating in space to keep you company.</p>
+        
+        <svg class="astronaut" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path fill="var(--accent)" d="M256 0c-83.6 0-152 68.4-152 152s68.4 152 152 152 152-68.4 152-152S339.6 0 256 0zm0 240c-48.5 0-88-39.5-88-88s39.5-88 88-88 88 39.5 88 88-39.5 88-88 88zm96 144c0-53-43-96-96-96s-96 43-96 96h192z"/>
+            <circle fill="var(--accent-light)" cx="256" cy="152" r="40"/>
+            <path fill="var(--accent-light)" d="M352 416H160c-35.3 0-64 28.7-64 64v16c0 8.8 7.2 16 16 16h288c8.8 0 16-7.2 16-16v-16c0-35.3-28.7-64-64-64z"/>
+        </svg>
+
+        <a href="/" class="btn home-btn">
+            <i class="fas fa-arrow-left"></i> Return to Safety
+        </a>
+    </div>
+
+    <script>
+        // Optional: Add theme toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check for saved theme preference
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            // Add button click effect
+            const homeBtn = document.querySelector('.home-btn');
+            if(homeBtn) {
+                homeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.body.style.opacity = '0';
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 300);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
