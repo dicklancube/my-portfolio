@@ -164,8 +164,8 @@ body::before {
 }
 
 .logo {
-  width: 420px;
-  height: 80px;
+  width: 100px;
+  height: 100%;
   margin-right: 15px;
 }
 
