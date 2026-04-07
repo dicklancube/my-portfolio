@@ -164,26 +164,17 @@ body::before {
 }
 
 .logo {
-  display: inline-flex;
-  flex-direction: column;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.5rem;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  line-height: 1.1;
-  justify-content: center;
-}
-.logo-top {
-  font-size: 1.5em;
-  letter-spacing: 1px;
+  width: 420px;
+  height: 80px;
+  margin-right: 15px;
 }
 
-.logo-bottom {
-  font-size: 1.5em;
-  letter-spacing: 2px;
+.logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+ margin-right: 55px;
 }
 
 .nav-links {
@@ -319,7 +310,7 @@ body::before {
   transform: translateY(20px);
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid var(--accent-light);
+  border: 3px solid var(--accent-light);
   box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
   transition: all 0.3s ease;
   opacity: 0;
@@ -389,6 +380,7 @@ body::before {
   transform: translateY(100%);
   opacity: 0;
   animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  
 }
 
 .hero-title .line:nth-child(1) {
